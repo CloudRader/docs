@@ -8,26 +8,43 @@ Welcome to the central documentation portal for the **CloudRader** organization.
 
 ---
 
-## :material-compass-outline: Documentation Overview
+## :material-compass-outline: Explore Documentation
 
-This documentation hub covers architecture, deployment patterns, and operational guidelines for CloudRader services:
+<div class="grid cards" markdown>
 
-- **Ecosystem Architecture** — Overview of how CloudRader services, shared standards, and communication flows fit together.
-- **Service Documentation** — Guides, configurations, and reference manuals for individual ecosystem tools (including Reservium and upcoming projects).
-- **Deployment & Self-Hosting** — Best practices for running, configuring, and maintaining CloudRader services in containerized and cloud environments.
-- **Contributing & Standards** — Guidelines for code style, documentation conventions, and organizational workflows.
+-   :material-sitemap-outline:{ .main-color } __[Architecture & Roadmap](ecosystem/architecture.md)__
 
----
+    ---
 
-## :material-source-branch: Organization Projects
+    Understand the core design principles, layered system architecture, and development milestones across the CloudRader ecosystem.
 
-CloudRader projects are modular, independent services designed to work standalone or integrate together:
+    [:material-arrow-right: View Architecture](ecosystem/architecture.md)
 
-!!! info "Reservium"
-    Resource and space reservation platform supporting flexible booking workflows, authentication integration, and clean administration.
+-   :material-view-grid-outline:{ .main-color } __[CloudRader Projects](projects/index.md)__
 
-!!! info "Inventarium"
-    Lightweight asset tracking and inventory management service designed for simple organizational tracking.
+    ---
+
+    Explore independent services in the ecosystem, including [Reservium](projects/reservium/index.md) for room reservations and [Inventarium](projects/inventarium/index.md) for asset tracking.
+
+    [:material-arrow-right: Explore Projects](projects/index.md)
+
+-   :material-server-network:{ .main-color } __[Self-Hosting & Homelab](hosting/quickstart-stack.md)__
+
+    ---
+
+    Deploy CloudRader services with unified Docker Compose, configure central Keycloak SSO, set up reverse proxies, and manage backups.
+
+    [:material-arrow-right: Self-Hosting Guide](hosting/quickstart-stack.md)
+
+-   :material-hand-heart-outline:{ .main-color } __[Contributing & Standards](contributing/index.md)__
+
+    ---
+
+    Join the community, review our Python and TypeScript engineering standards, and follow the step-by-step contribution workflow.
+
+    [:material-arrow-right: Contributor Guide](contributing/index.md)
+
+</div>
 
 ---
 
@@ -35,5 +52,3 @@ CloudRader projects are modular, independent services designed to work standalon
 
 [CloudRader on GitHub](https://github.com/CloudRader){ .md-button .md-button--primary }
 [Official Website](https://cloudrader.com){ .md-button }
-
-

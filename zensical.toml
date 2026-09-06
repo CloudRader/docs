@@ -3,8 +3,26 @@ site_name = "CloudRader Docs"
 extra_css = ["assets/stylesheets/extra.css"]
 
 nav = [
-    {"Home" =  [
+    {"Overview" = [
         "index.md",
+        "ecosystem/architecture.md",
+        "ecosystem/roadmap.md",
+    ]},
+    {"Projects" = [
+        "projects/index.md",
+        "projects/reservium/index.md",
+        "projects/inventarium/index.md",
+    ]},
+    {"Self-Hosting" = [
+        "hosting/quickstart-stack.md",
+        "hosting/identity-keycloak.md",
+        "hosting/reverse-proxy.md",
+        "hosting/backup-restore.md",
+    ]},
+    {"Contributing" = [
+        "contributing/index.md",
+        "contributing/standards.md",
+        "contributing/workflow.md",
     ]},
 ]
 
@@ -22,6 +40,7 @@ features = [
     "toc.integrate",
 
     "content.tooltips",
+    "content.code.copy",
 ]
 logo = "assets/logo.png"
 favicon = "assets/logo.png"
