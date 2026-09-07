@@ -1,8 +1,11 @@
-#2AC5F3
 :root  > * {
   --md-primary-fg-color:        #29AFED;
   --md-primary-fg-color--light: #29AFED;
   --md-primary-fg-color--dark:  #29AFED;
+}
+
+.main-color {
+  color: #29AFED;
 }
 
 .reservium-color {

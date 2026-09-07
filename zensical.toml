@@ -1,12 +1,22 @@
 [project]
 site_name = "CloudRader Docs"
+repo_name = "CloudRader/docs"
+repo_url = "https://github.com/CloudRader/docs"
+edit_uri = "https://github.com/CloudRader/docs/edit/main/docs/"
 extra_css = ["assets/stylesheets/extra.css"]
 
 nav = [
     {"Overview" = [
-        "index.md",
-        "ecosystem/architecture.md",
-        "ecosystem/roadmap.md",
+        {"Introduction" = [
+            "index.md",
+            "overview/about.md",
+            "overview/why-cloudrader.md",
+        ]},
+        {"Ecosystem" = [
+            "ecosystem/index.md",
+            "ecosystem/architecture.md",
+            "ecosystem/roadmap.md",
+        ]},
     ]},
     {"Projects" = [
         "projects/index.md",
@@ -36,9 +46,10 @@ features = [
     "navigation.tabs",
     "navigation.prune",
     "navigation.indexes",
+    "navigation.footer",
 
-    "toc.integrate",
-
+    "content.action.edit",
+    "content.action.view",
     "content.tooltips",
     "content.code.copy",
 ]
@@ -46,21 +57,21 @@ logo = "assets/logo.png"
 favicon = "assets/logo.png"
 
 [project.theme.icon]
-repo = "fontawesome/brands/github" # you can change this to any other icon from fontawesome
+repo = "fontawesome/brands/github"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 primary = "custom"
-# accent = "yellow"
+accent = "yellow"
 toggle.icon = "material/weather-night"
 toggle.name = "Switch to light mode"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
-# primary = "indigo"  # set prefer colors
-# accent = "yellow"
+primary = "custom"
+accent = "yellow"
 toggle.icon = "material/weather-sunny"
 toggle.name = "Switch to dark mode"
 

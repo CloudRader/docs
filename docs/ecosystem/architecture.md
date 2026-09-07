@@ -1,4 +1,8 @@
-# Ecosystem Architecture
+---
+icon: lucide/network
+---
+
+# Ecosystem Architecture :material-puzzle-outline:{ .main-color }
 
 CloudRader is designed as a modular ecosystem of independent, self-hostable tools that solve common organizational workflows. Rather than building a large monolithic platform, CloudRader focuses on loosely coupled services that work well individually and even better together.
 

@@ -1,54 +1,67 @@
-# CloudRader Documentation
+# Welcome to CloudRader! :fontawesome-solid-cloud:{ .main-color }
 
-<span class="badge modular" markdown>:material-book-open-page-variant-outline: Central Docs</span>
-<span class="badge self-hostable" markdown>:material-layers-outline: Multi-Project</span>
-<span class="badge cloud-native" markdown>:material-account-group-outline: Organization</span>
+## What is CloudRader?
 
-Welcome to the central documentation portal for the **CloudRader** organization. This site serves as the unified knowledge base, architectural overview, and guide repository for services and tools across the CloudRader ecosystem.
+Welcome to the **CloudRader Documentation**. This documentation is designed to help you navigate and understand the CloudRader ecosystem of modular, self-hostable tools. Whether you're an administrator, developer, or homelab enthusiast, you'll find everything you need here.
 
 ---
 
-## :material-compass-outline: Explore Documentation
+### :fontawesome-solid-map: Explore the Documentation
+
+Choose a section below to dive into specific details:
 
 <div class="grid cards" markdown>
 
--   :material-sitemap-outline:{ .main-color } __[Architecture & Roadmap](ecosystem/architecture.md)__
+-   :fontawesome-solid-compass:{ .main-color } __[Overview]__
 
     ---
 
-    Understand the core design principles, layered system architecture, and development milestones across the CloudRader ecosystem.
+    Introduction to the CloudRader initiative, mission, and philosophy.
 
-    [:material-arrow-right: View Architecture](ecosystem/architecture.md)
-
--   :material-view-grid-outline:{ .main-color } __[CloudRader Projects](projects/index.md)__
+-   :fontawesome-solid-layer-group:{ .main-color } __[Ecosystem]__
 
     ---
 
-    Explore independent services in the ecosystem, including [Reservium](projects/reservium/index.md) for room reservations and [Inventarium](projects/inventarium/index.md) for asset tracking.
+    Architectural principles, system layers, and multi-service roadmap.
 
-    [:material-arrow-right: Explore Projects](projects/index.md)
-
--   :material-server-network:{ .main-color } __[Self-Hosting & Homelab](hosting/quickstart-stack.md)__
+-   :fontawesome-solid-cubes:{ .main-color } __[Projects]__
 
     ---
 
-    Deploy CloudRader services with unified Docker Compose, configure central Keycloak SSO, set up reverse proxies, and manage backups.
+    Independent services including Reservium (reservations) and Inventarium (assets).
 
-    [:material-arrow-right: Self-Hosting Guide](hosting/quickstart-stack.md)
-
--   :material-hand-heart-outline:{ .main-color } __[Contributing & Standards](contributing/index.md)__
+-   :fontawesome-solid-server:{ .main-color } __[Self-Hosting]__
 
     ---
 
-    Join the community, review our Python and TypeScript engineering standards, and follow the step-by-step contribution workflow.
+    Unified Docker Compose stack, Keycloak SSO, and reverse proxy setup.
 
-    [:material-arrow-right: Contributor Guide](contributing/index.md)
+-   :fontawesome-solid-handshake:{ .main-color } __[Contributing]__
+
+    ---
+
+    Development standards, code conventions, and contribution workflow.
 
 </div>
 
+  [Overview]: overview/about.md
+  [Ecosystem]: ecosystem/index.md
+  [Projects]: projects/index.md
+  [Self-Hosting]: hosting/quickstart-stack.md
+  [Contributing]: contributing/index.md
+
 ---
 
-## :material-link-variant: Resources & Links
+## :fontawesome-solid-circle-question: Getting Started
 
-[CloudRader on GitHub](https://github.com/CloudRader){ .md-button .md-button--primary }
-[Official Website](https://cloudrader.com){ .md-button }
+If you are new to CloudRader, we recommend starting with **[What is CloudRader?](overview/about.md)** to understand our modular architecture and philosophy.
+
+### Why a modular ecosystem?
+
+CloudRader applications are built to operate independently while integrating seamlessly:
+
+!!! info "Modular & Self-Hostable"
+    - **Independent Services**: Run only the tools you need (like Reservium for reservations) without monolithic bloat.
+    - **Unified Experience**: Connect services through shared OpenID Connect (Keycloak) authentication for effortless single sign-on.
+
+    Learn more about our architecture in the [Ecosystem Architecture](ecosystem/architecture.md) guide.

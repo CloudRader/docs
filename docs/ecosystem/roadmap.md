@@ -1,4 +1,8 @@
-# Ecosystem Roadmap
+---
+icon: lucide/map
+---
+
+# Ecosystem Roadmap :material-flag-checkered:{ .main-color }
 
 This roadmap outlines the past, current, and upcoming development milestones across the CloudRader organization and its core services.
 
