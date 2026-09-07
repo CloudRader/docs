@@ -1,65 +1,177 @@
-:root  > * {
-  --md-primary-fg-color:        #29AFED;
-  --md-primary-fg-color--light: #29AFED;
-  --md-primary-fg-color--dark:  #29AFED;
+/* ==========================================================================
+   CloudRader Design System (Inspired by cloudrader.com)
+   ========================================================================== */
+
+:root {
+  /* Brand Core Colors */
+  --brand-cyan: #2AC5F3;
+  --brand-cyan-soft: rgba(42, 197, 243, 0.12);
+  --brand-cyan-border: rgba(42, 197, 243, 0.28);
+  --brand-cyan-glow: rgba(42, 197, 243, 0.25);
+
+  --brand-green: #10B981;
+  --brand-green-soft: rgba(16, 185, 129, 0.12);
+  --brand-green-border: rgba(16, 185, 129, 0.28);
+
+  --brand-purple: #A97BFF;
+  --brand-purple-soft: rgba(169, 123, 255, 0.12);
+  --brand-purple-border: rgba(169, 123, 255, 0.28);
+
+  --brand-amber: #F59E0B;
+  --brand-amber-soft: rgba(245, 158, 11, 0.12);
+  --brand-amber-border: rgba(245, 158, 11, 0.28);
+}
+
+/* Light Theme Variables */
+:root, [data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #0284c7;
+  --md-primary-fg-color--light: #2ac5f3;
+  --md-primary-fg-color--dark:  #0369a1;
+  --md-accent-fg-color:         #0284c7;
+
+  --md-default-bg-color:        #f8fafc;
+  --md-default-fg-color:        #0f172a;
+  --md-default-fg-color--light: #475569;
+}
+
+/* Dark Theme Variables (Matching cloudrader.com space theme) */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #2ac5f3;
+  --md-primary-fg-color--light: #5cd3f7;
+  --md-primary-fg-color--dark:  #1aa5cf;
+  --md-accent-fg-color:         #2ac5f3;
+
+  --md-default-bg-color:        #070b14;
+  --md-default-bg-color--light: #0d1527;
+  --md-default-bg-color--lighter: #131e35;
+  --md-default-fg-color:        #f8fafc;
+  --md-default-fg-color--light: #94a3b8;
+  --md-default-fg-color--lighter: #64748b;
+}
+
+/* Dark mode ambient space gradient */
+[data-md-color-scheme="slate"] body {
+  background-color: #070b14;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(42, 197, 243, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 10% 35%, rgba(169, 123, 255, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 90% 65%, rgba(16, 185, 129, 0.06) 0%, transparent 40%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .main-color {
-  color: #29AFED;
+  color: var(--brand-cyan) !important;
 }
 
 .reservium-color {
-  color: #479F35 !important;
+  color: var(--brand-green) !important;
 }
 
 .inventarium-color {
-  color: #A97BFF !important;
+  color: var(--brand-purple) !important;
 }
 
-/* Tagline Badges */
-.badge {
-  padding: 4px 12px;
-  border-radius: 50px;
-  font-size: 0.8em;
+/* Sidebar Active Navigation Pill */
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  background-color: var(--brand-cyan-soft) !important;
+  color: var(--brand-cyan) !important;
+  border-radius: 8px;
   font-weight: 600;
+}
+
+[data-md-color-scheme="default"] .md-nav__item--active > .md-nav__link {
+  background-color: rgba(2, 132, 199, 0.08) !important;
+  color: #0284c7 !important;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Header subtle border */
+.md-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Grid Cards (Glassmorphism inspired by cloudrader.com) */
+[data-md-color-scheme="slate"] .grid.cards > ul > li {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  transition: all 0.22s ease !important;
+}
+
+[data-md-color-scheme="slate"] .grid.cards > ul > li:hover {
+  border-color: var(--brand-cyan-border) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 25px var(--brand-cyan-glow) !important;
+}
+
+[data-md-color-scheme="default"] .grid.cards > ul > li {
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.22s ease !important;
+}
+
+[data-md-color-scheme="default"] .grid.cards > ul > li:hover {
+  border-color: rgba(2, 132, 199, 0.4) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Badges (Exact match to cloudrader.com) */
+.badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-right: 8px;
-  margin-bottom: 12px;
-  border: 1px solid transparent;
-  transition: all 0.2s ease;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 600;
   text-decoration: none !important;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  transition: all 0.18s ease;
+  margin-right: 6px;
+  margin-bottom: 12px;
+  line-height: 1.35;
+  vertical-align: middle;
 }
 
 .badge:hover {
   transform: translateY(-1px);
-  filter: brightness(1.1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.badge .twemoji {
-  width: 1.1em;
-  height: 1.1em;
+.badge svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: -1px;
 }
 
-.badge.modular {
-  background-color: rgba(66, 165, 245, 0.12);
-  color: #90caf9;
-  border-color: rgba(144, 202, 249, 0.25);
+.badge.modular, .badge-cyan {
+  background: var(--brand-cyan-soft);
+  color: var(--brand-cyan);
+  border-color: var(--brand-cyan-border);
 }
-.badge.self-hostable, .badge.reservium {
-  background-color: rgba(102, 187, 106, 0.12);
-  color: #a5d6a7;
-  border-color: rgba(165, 214, 167, 0.25);
+
+.badge.self-hostable, .badge.reservium, .badge-green {
+  background: var(--brand-green-soft);
+  color: var(--brand-green);
+  border-color: var(--brand-green-border);
 }
-.badge.cloud-native {
-  background-color: rgba(255, 167, 38, 0.12);
-  color: #ffcc80;
-  border-color: rgba(255, 204, 128, 0.25);
+
+.badge.inventarium, .badge-purple {
+  background: var(--brand-purple-soft);
+  color: var(--brand-purple);
+  border-color: var(--brand-purple-border);
 }
-.badge.inventarium {
-  background-color: rgba(169, 123, 255, 0.12);
-  color: #b388ff;
-  border-color: rgba(169, 123, 255, 0.25);
+
+.badge.cloud-native, .badge-amber {
+  background: var(--brand-amber-soft);
+  color: var(--brand-amber);
+  border-color: var(--brand-amber-border);
 }
