@@ -20,7 +20,7 @@ This roadmap outlines the past, current, and upcoming development milestones acr
 
 ### 1. Inventarium (Asset & Equipment Management)
 - Finalize domain model for organizational assets, equipment check-in/check-out, and custody tracking.
-- Scaffold FastAPI backend with PostgreSQL and Alembic migrations.
+- Scaffold Kotlin / Spring Boot backend with PostgreSQL and Liquibase migrations.
 - Develop modern web UI for asset browsing and QR code generation.
 
 ### 2. Unified Self-Hosting Stack

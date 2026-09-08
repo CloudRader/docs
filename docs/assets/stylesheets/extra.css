@@ -175,3 +175,50 @@
   color: var(--brand-amber);
   border-color: var(--brand-amber-border);
 }
+
+/* Tech Stack Tags (Matching cloudrader.com) */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  font-size: 0.74rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--md-code-font-family, monospace);
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.4;
+  margin-right: 4px;
+  margin-bottom: 6px;
+  vertical-align: middle;
+}
+
+[data-md-color-scheme="default"] .tech-tag {
+  background: rgba(0, 0, 0, 0.04);
+  color: #475569;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Action Links & Buttons */
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-md-color-scheme="default"] .card-actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
