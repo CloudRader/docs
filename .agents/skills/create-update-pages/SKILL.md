@@ -33,7 +33,7 @@ Use placeholders for secrets and environment-specific values.
 - `docs/index.md`: CloudRader organization documentation home page.
 - `docs/ecosystem/`: Architecture principles and organization roadmap.
 - `docs/projects/`: Service catalog and project overviews (Reservium, Inventarium).
-- `docs/hosting/`: Self-hosting guides, Keycloak SSO, reverse proxy, and backups.
+- `docs/hosting/`: Self-hosting guides, Identity Provider SSO, reverse proxy, and backups.
 - `docs/contributing/`: Contribution guidelines, development standards, and workflows.
 - `docs/assets/logo.png`: Shared logo and favicon.
 - `docs/assets/stylesheets/extra.css`: Shared site styling.

@@ -32,7 +32,7 @@ make install
 project dependency. Install it separately if needed, then install its Git hook:
 
 ```bash
-pre-commit install
+make pre-commit-install
 ```
 
 Do not commit `.venv`, `.cache`, or generated site files.
@@ -106,7 +106,7 @@ workflows and constraints.
 The production artifact is generated with:
 
 ```bash
-uv run zensical build --clean
+make build
 ```
 
 GitHub Actions deploys the generated `site/` directory to GitHub Pages on every
