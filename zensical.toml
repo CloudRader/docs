@@ -24,8 +24,9 @@ nav = [
         "projects/inventarium/index.md",
     ]},
     {"Self-Hosting" = [
+        "hosting/index.md",
         "hosting/quickstart-stack.md",
-        "hosting/identity-keycloak.md",
+        "hosting/identity-provider.md",
         "hosting/reverse-proxy.md",
         "hosting/backup-restore.md",
     ]},

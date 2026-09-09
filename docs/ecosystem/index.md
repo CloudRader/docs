@@ -43,6 +43,6 @@ Choose a section below to dive into architecture and roadmaps:
 All services within the CloudRader ecosystem adhere to shared structural foundations:
 
 !!! info "Foundation Highlights"
-    - **Single Sign-On (SSO)**: Powered by standard OpenID Connect (OIDC) via Keycloak.
+    - **Single Sign-On (SSO)**: Powered by standard OpenID Connect (OIDC) compatible with any compliant identity provider.
     - **Isolated Persistence**: Each application owns its dedicated database schema without cross-database locks.
     - **Declarative Deployment**: Managed via standard Docker Compose configurations.

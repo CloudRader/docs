@@ -61,7 +61,7 @@ Inventarium leverages Kotlin and Spring Boot for a robust, enterprise-grade back
 
 - **Backend Service**: Built with Kotlin, Spring Boot 3, Spring Data JPA, and Gradle.
 - **Database Migrations**: Managed declaratively through Liquibase change logs.
-- **Identity & Security**: Authenticates via Keycloak OAuth2 / OpenID Connect resource server standards.
+- **Identity & Security**: Authenticates via standard OAuth2 / OpenID Connect resource server standards compatible with any compliant identity provider.
 - **Isolated Storage**: Dedicated PostgreSQL schema ensuring zero database dependencies on other CloudRader services.
 
 ---
@@ -81,5 +81,3 @@ Inventarium leverages Kotlin and Spring Boot for a robust, enterprise-grade back
 
     - **Next Milestones**: Core asset models, check-in/out workflows, and REST API endpoints.
     - **Follow Progress**: Check out the [Ecosystem Roadmap](../../ecosystem/roadmap.md) for organization-wide milestones and release schedules.
-
-

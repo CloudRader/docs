@@ -23,7 +23,7 @@ Every application in the CloudRader ecosystem operates as an autonomous service:
 While services are independently deployed, user authentication is unified:
 
 - All CloudRader services support **OpenID Connect (OIDC)** authentication.
-- **Keycloak** serves as the recommended reference identity provider for homelabs and organizations.
+- CloudRader is **identity provider agnostic**—services integrate seamlessly with any OIDC-compliant provider (such as Keycloak, Authentik, Authelia, or Zitadel).
 - Users authenticate once and access all permitted CloudRader services seamlessly.
 
 ### 3. API-First Design
@@ -53,13 +53,13 @@ The CloudRader architecture is structured across four primary layers:
 [ Edge Layer: Reverse Proxy & TLS (Caddy / Traefik) ]
      │                              │
      ▼                              ▼
-[ Identity: Keycloak (OIDC) ]    [ Application: Reservium / Inventarium ]
+[ Identity: Provider (OIDC) ]    [ Application: Reservium / Inventarium ]
      │                              │
      ▼                              ▼
 [ Auth DB: PostgreSQL ]          [ App DB: PostgreSQL ]
 ```
 
 1. **Edge Layer**: Reverse proxy (Caddy, Traefik, or Nginx) handling SSL termination, domain routing, and certificate management.
-2. **Identity Layer**: Keycloak or any standard OIDC provider managing user accounts, realms, and access tokens.
+2. **Identity Layer**: Any standard OpenID Connect (OIDC) identity provider managing user accounts, permissions, and access tokens.
 3. **Application Layer**: CloudRader microservices (Reservium, Inventarium) handling domain business logic.
 4. **Data Layer**: Persistent PostgreSQL databases with service-specific schemas or instances.

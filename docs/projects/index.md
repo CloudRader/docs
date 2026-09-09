@@ -24,7 +24,7 @@ The **CloudRader** ecosystem is composed of single-purpose, autonomous services 
     <span class="badge badge-green"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> Reservium</span>
     <span class="badge badge-cyan"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Production Ready</span>
 
-    A comprehensive room, space, and shared resource reservation system with interactive calendar scheduling, manager approvals, and Keycloak SSO.
+    A comprehensive room, space, and shared resource reservation system with interactive calendar scheduling, manager approvals, and OpenID Connect (OIDC) SSO.
 
     <span class="tech-tag">Python</span> <span class="tech-tag">FastAPI</span> <span class="tech-tag">React</span> <span class="tech-tag">PostgreSQL</span> <span class="tech-tag">OIDC</span> <span class="tech-tag">Docker</span>
 
@@ -78,7 +78,7 @@ Traditional enterprise suites force organizations into monolithic systems where 
 
     ---
 
-    Connect services through shared OpenID Connect (Keycloak) authentication for effortless single sign-on across all applications.
+    Connect services through shared OpenID Connect (OIDC) authentication for effortless single sign-on across all applications.
 
 -   :material-code-json:{ .main-color } __API-First Open Standards__
 
@@ -93,8 +93,6 @@ Traditional enterprise suites force organizations into monolithic systems where 
 ## :material-rocket-launch-outline: Deployment & Quickstart
 
 !!! info "Deploy with Docker Compose"
-    Want to run CloudRader services in your homelab or organization? All services can be deployed together with automated Keycloak SSO via our reference Docker Compose stack.
+    Want to run CloudRader services in your homelab or organization? All services can be deployed together with automated identity provider SSO via our reference Docker Compose stack.
 
     Read the **[Unified Quickstart Stack Guide](../hosting/quickstart-stack.md)** to get started in minutes.
-
-

@@ -29,11 +29,11 @@ icon: lucide/calendar-check-2
 
     Granular permissions separating regular users (browse & book), managers (review & approve requests), and administrators.
 
--   :material-key-chain:{ .reservium-color } __Keycloak Single Sign-On__
+-   :material-key-chain:{ .reservium-color } __Single Sign-On (SSO)__
 
     ---
 
-    Native OpenID Connect (OIDC) integration. Authenticate once through Auth sysyem and synchronize user profile roles automatically.
+    Native OpenID Connect (OIDC) integration. Connect with any compliant identity provider (such as Keycloak, Authentik, or Authelia) and synchronize user profile roles automatically.
 
 -   :material-api:{ .reservium-color } __OpenAPI 3.0 REST Backend__
 
@@ -85,6 +85,4 @@ Reservium is decoupled into an asynchronous Python API backend and a responsive 
     - **[User Guide :material-open-in-new:](https://docs.reservium.cloudrader.com/user-guide/quickstart/)**: How to explore calendars, reserve resources, and manage personal bookings.
     - **[Manager Guide :material-open-in-new:](https://docs.reservium.cloudrader.com/manager-guide/manager-panel/)**: How to approve reservation requests, configure calendars, and define service policies.
     - **[API Reference :material-open-in-new:](https://docs.reservium.cloudrader.com/api-reference/)**: Complete interactive REST endpoint reference and OpenAPI specification.
-    - **[Deploy with CloudRader](../../hosting/quickstart-stack.md)**: Deploy Reservium alongside Keycloak in the unified Docker Compose stack.
-
-
+    - **[Deploy with CloudRader](../../hosting/quickstart-stack.md)**: Deploy Reservium alongside a central identity provider in the unified Docker Compose stack.

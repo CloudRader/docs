@@ -36,7 +36,7 @@ Choose a section below to dive into specific details:
 
     ---
 
-    Unified Docker Compose stack, Keycloak SSO, and reverse proxy setup.
+    Unified Docker Compose stack, central identity (SSO), and reverse proxy setup.
 
 -   :fontawesome-solid-handshake:{ .main-color } __[Contributing]__
 
@@ -49,7 +49,7 @@ Choose a section below to dive into specific details:
   [Overview]: overview/about.md
   [Ecosystem]: ecosystem/index.md
   [Projects]: projects/index.md
-  [Self-Hosting]: hosting/quickstart-stack.md
+  [Self-Hosting]: hosting/index.md
   [Contributing]: contributing/index.md
 
 ---
@@ -64,6 +64,6 @@ CloudRader applications are built to operate independently while integrating sea
 
 !!! info "Modular & Self-Hostable"
     - **Independent Services**: Run only the tools you need (like Reservium for reservations) without monolithic bloat.
-    - **Unified Experience**: Connect services through shared OpenID Connect (Keycloak) authentication for effortless single sign-on.
+    - **Unified Experience**: Connect services through shared OpenID Connect (OIDC) authentication for effortless single sign-on.
 
     Learn more about our architecture in the [Ecosystem Architecture](ecosystem/architecture.md) guide.

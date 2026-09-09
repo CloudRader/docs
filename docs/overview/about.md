@@ -14,7 +14,7 @@ Modern software suites are frequently monolithic, expensive, or tied to propriet
 
 - :material-calendar-clock: **Reservium** — Room, desk, and shared resource reservation platform.
 - :material-package-variant-closed: **Inventarium** — Lightweight organizational asset and equipment tracking (planned).
-- :material-shield-key: **Central Identity** — Unified single sign-on across all applications using standard Keycloak OIDC.
+- :material-shield-key: **Central Identity** — Unified single sign-on across all applications using standard OpenID Connect (OIDC) identity providers.
 
 ---
 

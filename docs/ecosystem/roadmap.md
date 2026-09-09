@@ -12,7 +12,7 @@ This roadmap outlines the past, current, and upcoming development milestones acr
 
 - **Reservium MVP**: Core space and room reservation system with visual calendar, manager controls, and OIDC support.
 - **Central Documentation**: Unified documentation hub establishing standards, architecture, and deployment patterns.
-- **Single Sign-On Standard**: Defined Keycloak integration baseline across current and future services.
+- **Single Sign-On Standard**: Defined provider-agnostic OpenID Connect (OIDC) integration baseline across current and future services.
 
 ---
 
@@ -24,8 +24,8 @@ This roadmap outlines the past, current, and upcoming development milestones acr
 - Develop modern web UI for asset browsing and QR code generation.
 
 ### 2. Unified Self-Hosting Stack
-- Reference Docker Compose setup running Keycloak, PostgreSQL, and Reservium with one command.
-- Automated Keycloak realm import scripts for effortless first-time setups.
+- Reference Docker Compose setup running an identity provider (Keycloak example), PostgreSQL, and Reservium with one command.
+- Automated identity provider realm and client initialization scripts for effortless first-time setups.
 - Healthcheck orchestration and container restart policies.
 
 ### 3. Shared Design System & Components

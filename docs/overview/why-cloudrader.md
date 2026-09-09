@@ -29,7 +29,7 @@ Self-hosting your services means your data never leaves your infrastructure. You
 Because each CloudRader service is autonomous, you can deploy just one service or the entire suite without unnecessary overhead.
 
 ### :material-key-chain: Seamless User Experience
-Integration with Keycloak provides single sign-on (SSO). Users log in once and access all permitted tools across your organization.
+Integration with any standard OpenID Connect (OIDC) identity provider provides single sign-on (SSO). Users log in once and access all permitted tools across your organization.
 
 ### :material-code-tags: Developer-Friendly
 Every service exposes clean, documented REST APIs, making it simple to build internal integrations, scripts, and automations.
