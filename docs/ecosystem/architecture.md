@@ -46,17 +46,33 @@ Every capability available in CloudRader user interfaces is backed by a well-def
 
 The CloudRader architecture is structured across four primary layers:
 
-```
-[ Clients: Web & Mobile ]
-           │
-           ▼
-[ Edge Layer: Reverse Proxy & TLS (Caddy / Traefik) ]
-     │                              │
-     ▼                              ▼
-[ Identity: Provider (OIDC) ]    [ Application: Reservium / Inventarium ]
-     │                              │
-     ▼                              ▼
-[ Auth DB: PostgreSQL ]          [ App DB: PostgreSQL ]
+``` mermaid
+flowchart TD
+    Clients["Clients: Web & Mobile"]
+
+    subgraph Edge["Edge Layer"]
+        Proxy["Reverse Proxy & TLS<br/>Caddy / Traefik"]
+    end
+
+    subgraph Identity["Identity Layer"]
+        IdP["Identity Provider (OIDC)<br/>Keycloak / Authentik / Authelia"]
+    end
+
+    subgraph App["Application Layer"]
+        Apps["CloudRader Services<br/>Reservium / Inventarium"]
+    end
+
+    subgraph Data["Data Layer"]
+        AuthDB[("Auth DB<br/>PostgreSQL")]
+        AppDB[("App DBs<br/>PostgreSQL")]
+    end
+
+    Clients --> Proxy
+    Proxy --> IdP
+    Proxy --> Apps
+    Apps -.->|"Verify Token"| IdP
+    IdP --> AuthDB
+    Apps --> AppDB
 ```
 
 1. **Edge Layer**: Reverse proxy (Caddy, Traefik, or Nginx) handling SSL termination, domain routing, and certificate management.

@@ -85,4 +85,5 @@ Reservium is decoupled into an asynchronous Python API backend and a responsive 
     - **[User Guide :material-open-in-new:](https://docs.reservium.cloudrader.com/user-guide/quickstart/)**: How to explore calendars, reserve resources, and manage personal bookings.
     - **[Manager Guide :material-open-in-new:](https://docs.reservium.cloudrader.com/manager-guide/manager-panel/)**: How to approve reservation requests, configure calendars, and define service policies.
     - **[API Reference :material-open-in-new:](https://docs.reservium.cloudrader.com/api-reference/)**: Complete interactive REST endpoint reference and OpenAPI specification.
-    - **[Deploy with CloudRader](../../hosting/quickstart-stack.md)**: Deploy Reservium alongside a central identity provider in the unified Docker Compose stack.
+    - **[Standalone Hosting Guide :material-open-in-new:](https://docs.reservium.cloudrader.com/hosting-guide/)**: Standalone deployment documentation tailored specifically for Reservium.
+    - **[Deploy with CloudRader Ecosystem](../../hosting/quickstart-stack.md)**: Deploy Reservium as part of the multi-service CloudRader Docker Compose stack.
