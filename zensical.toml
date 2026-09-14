@@ -38,6 +38,7 @@ nav = [
 ]
 
 [project.theme]
+custom_dir = "overrides"
 features = [
     "navigation.instant",
     "navigation.instant.prefetch",
