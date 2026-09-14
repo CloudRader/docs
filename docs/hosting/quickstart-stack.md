@@ -14,7 +14,7 @@ This guide walks through deploying the complete **CloudRader ecosystem stack** u
 
 !!! tip "Deploying Reservium Standalone?"
     If you only need room & calendar booking without running other CloudRader services or the central ecosystem stack, refer directly to the **[Reservium Standalone Hosting Guide :material-open-in-new:](https://docs.reservium.cloudrader.com/hosting-guide/introduction/)**.
-    
+
     This guide focuses on the **organization-wide deployment** where multiple CloudRader services run together, sharing central authentication and database infrastructure.
 
 ---
