@@ -10,7 +10,7 @@ Key paths:
 
 - `docs/`: Markdown pages and static assets.
 - `docs/assets/`: Shared logo, images, and custom CSS.
-- `mise.toml`: Pinned tool versions (Python, uv, pre-commit) and task runner commands.
+- `mise.toml`: Pinned tool versions (uv) and task runner commands.
 - `zensical.toml`: Site navigation, theme, and Markdown extensions.
 - `site/`: Generated site output; do not edit it by hand.
 - `.github/workflows/build.yml`: GitHub Pages build and deployment workflow.
@@ -19,7 +19,7 @@ Key paths:
 
 Prerequisites:
 
-- `mise` (manages Python `3.14.7`, `uv`, and `pre-commit` as configured in `mise.toml`).
+- `mise` (manages `uv` as configured in `mise.toml`; `uv` manages Python and project dependencies).
 - `git`.
 
 Install the tools and locked dependencies from the repository root:

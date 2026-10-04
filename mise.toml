@@ -1,13 +1,15 @@
 [tools]
-python = "3.14.8"
 uv = "0.12.22"
-pre-commit = "4.6.2"
 
 [tasks.install]
 description = "Install locked dependencies"
 run = "uv sync --locked"
 
-[tasks.build]m
+[tasks.sync]
+description = "Sync dependencies without lock constraint"
+run = "uv sync"
+
+[tasks.build]
 description = "Build the documentation site"
 run = "uv run zensical build --clean"
 
@@ -17,11 +19,11 @@ run = "uv run zensical serve"
 
 [tasks.pre-commit]
 description = "Run all pre-commit hooks"
-run = "pre-commit run --all-files"
+run = "uv run pre-commit run --all-files"
 
 [tasks.pre-commit-install]
 description = "Install pre-commit as a Git hook"
-run = "pre-commit install"
+run = "uv run pre-commit install"
 
 [tasks.check]
 description = "Run all checks"
