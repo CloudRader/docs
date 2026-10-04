@@ -2,7 +2,7 @@
 name = "cloudrader-docs"
 version = "0.1.0"
 description = "Organization-wide documentation for CloudRader"
-requires-python = "==3.14.7"
+requires-python = "==3.14.8"
 dependencies = [
   "zensical==0.0.57",
 ]

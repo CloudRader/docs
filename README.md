@@ -11,14 +11,12 @@ This repository contains the organization-wide documentation for CloudRader and 
 
 ## 🚀 Local Development
 
-We use [uv](https://github.com/astral-sh/uv) for fast Python package management.
+We use [mise](https://mise.jdx.dev) to automatically manage the pinned development environment (Python, uv, and pre-commit) and execute project tasks.
 
 ### Prerequisites
 
-1. **Install `uv`** (if you haven't already):
-   ```bash
-   curl -LsSf https://astral-sh.uv/install.sh | sh
-   ```
+- [mise](https://mise.jdx.dev)
+- [git](https://git-scm.com/)
 
 ### Running the Site
 
@@ -28,10 +26,11 @@ We use [uv](https://github.com/astral-sh/uv) for fast Python package management.
    cd docs
    ```
 
-2. **Install dependencies and start the server**:
+2. **Install tools, dependencies, and start the preview server**:
    ```bash
-   make install
-   make serve
+   mise install
+   mise run install
+   mise run serve
    ```
    The site will be available at `http://localhost:8000`.
 
@@ -39,6 +38,7 @@ We use [uv](https://github.com/astral-sh/uv) for fast Python package management.
 
 - `docs/`: Contains the Markdown source files for the documentation.
 - `docs/assets/`: Images, logos, and custom CSS stylesheets.
+- `mise.toml`: Pinned tool versions and task runner configuration.
 - `zensical.toml`: Configuration for the Zensical site generator.
 
 ## 🌈 Contributing

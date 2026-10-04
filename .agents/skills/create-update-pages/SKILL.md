@@ -94,17 +94,17 @@ screenshots. For each image:
 5. Check headings, links, image paths, code fences, admonitions, and navigation.
 6. Build the site and run the repository checks before reporting completion.
 
-Use the Makefile for normal workflows:
+Use mise tasks for normal workflows:
 
 ```bash
-make install
-make build
-make serve
-make pre-commit
-make check
+mise run install
+mise run build
+mise run serve
+mise run pre-commit
+mise run check
 ```
 
-`make check` runs a clean Zensical build and all configured pre-commit hooks.
+`mise run check` runs a clean Zensical build and all configured pre-commit hooks.
 There is currently no separate link checker or application test suite.
 
 ## Completion Report

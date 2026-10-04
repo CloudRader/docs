@@ -10,8 +10,8 @@ Key paths:
 
 - `docs/`: Markdown pages and static assets.
 - `docs/assets/`: Shared logo, images, and custom CSS.
+- `mise.toml`: Pinned tool versions (Python, uv, pre-commit) and task runner commands.
 - `zensical.toml`: Site navigation, theme, and Markdown extensions.
-- `Makefile`: Local installation, development, build, and validation commands.
 - `site/`: Generated site output; do not edit it by hand.
 - `.github/workflows/build.yml`: GitHub Pages build and deployment workflow.
 
@@ -19,20 +19,20 @@ Key paths:
 
 Prerequisites:
 
-- `uv`.
-- Python `3.14.7`, as pinned by `pyproject.toml`.
+- `mise` (manages Python `3.14.7`, `uv`, and `pre-commit` as configured in `mise.toml`).
+- `git`.
 
-Install the locked dependencies from the repository root:
+Install the tools and locked dependencies from the repository root:
 
 ```bash
-make install
+mise install
+mise run install
 ```
 
-`pre-commit` is required for the validation target but is not listed as a
-project dependency. Install it separately if needed, then install its Git hook:
+Install the pre-commit Git hook:
 
 ```bash
-make pre-commit-install
+mise run pre-commit-install
 ```
 
 Do not commit `.venv`, `.cache`, or generated site files.
@@ -42,13 +42,13 @@ Do not commit `.venv`, `.cache`, or generated site files.
 Build the documentation site locally:
 
 ```bash
-make build
+mise run build
 ```
 
 The generated files are written to `site/`. Preview the site with:
 
 ```bash
-make serve
+mise run serve
 ```
 
 The default local URL is `http://localhost:8000`.
@@ -57,8 +57,8 @@ Edit Markdown under `docs/` and update the `nav` structure in `zensical.toml`
 when adding, moving, or renaming pages. Keep shared images and stylesheets in
 `docs/assets/`.
 
-Use `make help` to list all available Makefile targets. Use `uv run ...`
-directly only when a command has no Makefile target.
+Use `mise run <task>` for normal local workflows. Use `uv run ...`
+directly only when a command has no task target.
 
 ## Testing and Checks
 
@@ -66,7 +66,7 @@ There is no application test suite in this repository. Before submitting
 documentation changes, run:
 
 ```bash
-make check
+mise run check
 ```
 
 This performs a clean Zensical build and runs all configured pre-commit hooks.
@@ -76,8 +76,8 @@ large added files.
 For focused validation, run:
 
 ```bash
-make build
-make pre-commit
+mise run build
+mise run pre-commit
 ```
 
 ## Code and Content Conventions
@@ -106,18 +106,18 @@ workflows and constraints.
 The production artifact is generated with:
 
 ```bash
-make build
+mise run build
 ```
 
 GitHub Actions deploys the generated `site/` directory to GitHub Pages on every
 push to `main`. The workflow installs dependencies with `uv`, builds the site,
 uploads the artifact, and deploys it. There is no separate pull-request
-workflow in this repository, so run `make check` locally before review.
+workflow in this repository, so run `mise run check` locally before review.
 
 To remove generated output and caches locally:
 
 ```bash
-make clean
+mise run clean
 ```
 
 ## Security and Repository Hygiene
@@ -132,4 +132,4 @@ make clean
 No repository-specific title or commit-message convention is defined in the
 checked-in configuration. Keep changes focused, describe affected pages or
 configuration, and report the validation performed. At minimum, run
-`make check` before requesting review.
+`mise run check` before requesting review.
